@@ -1,21 +1,31 @@
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import React, { Fragment } from "react";
+import { StyleSheet, ScrollView, Text, View, Image } from "react-native";
 
-export default function App() {
+import { Home } from "./components/View";
+
+const App = () => {
+  const data = {
+    image:
+      "https://concepto.de/wp-content/uploads/2014/03/modelo-e1551453273683.jpg",
+    name: "Noldin Zambrano",
+    likes: 100,
+  };
+
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <Fragment>
+      <View style={styles.container}>
+        <Home data={data} />
+      </View>
+    </Fragment>
   );
-}
+};
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: "lightgray",
+    paddingTop: 30,
   },
 });
+
+export default App;
