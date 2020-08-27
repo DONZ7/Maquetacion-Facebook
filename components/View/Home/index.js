@@ -11,7 +11,6 @@ const Home = (data) => {
   return (
     <View style={styles.container}>
       <Headers name={data} />
-
       <Content />
       <Footer />
     </View>
