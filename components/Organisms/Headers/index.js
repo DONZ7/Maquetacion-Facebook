@@ -1,5 +1,5 @@
 import React from "react";
-import { StyleSheet, Text, View, Image } from "react-native";
+import { StyleSheet, Text, View, Image, TextInput } from "react-native";
 
 import { Ionicons } from "@expo/vector-icons";
 
@@ -11,11 +11,17 @@ const Headers = (data) => {
   const { name } = data;
   return (
     <View style={styles.box}>
-      <View style={styles.info}>
+      <View>
         <View style={styles.row}>
-          <Ionicons name="ios-search" size={24} color="black" />
-          <View style={styles.iconsContainer}>
-            <Text style={styles.name}>Noldin</Text>
+          <View>
+            <Ionicons name="ios-search" size={24} color="gray" />
+          </View>
+          <View style={styles.searchSection}>
+            <TextInput
+              style={styles.name}
+              placeholder="Buscar"
+              underlineColorAndroid="transparent"
+            />
           </View>
         </View>
       </View>
@@ -30,25 +36,43 @@ const styles = StyleSheet.create({
   },
 
   box: {
-    backgroundColor: "white",
+    backgroundColor: "lightgray",
     flexDirection: "row",
-    height: 50,
+    height: 40,
+    marginHorizontal: 30,
+    marginVertical: 8,
+    borderRadius: 50,
   },
 
-  info: {
-    flex: 1,
-    flexDirection: "column",
-    alignItems: "center",
-  },
+  info: {},
   name: {
     fontSize: 17,
   },
 
   row: {
     flexDirection: "row",
-    marginHorizontal: 60,
+    marginHorizontal: 12,
     marginTop: 10,
     justifyContent: "space-between",
+  },
+
+  searchSection: {
+    marginHorizontal: 10,
+    width: 240,
+    color: "#424242",
+    alignItems: "flex-start",
+  },
+  searchIcon: {
+    padding: 10,
+  },
+  input: {
+    flex: 1,
+    paddingTop: 10,
+    paddingRight: 10,
+    paddingBottom: 10,
+    paddingLeft: 0,
+    backgroundColor: "#fff",
+    color: "#424242",
   },
 });
 

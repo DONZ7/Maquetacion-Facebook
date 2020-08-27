@@ -1,18 +1,26 @@
 import React from "react";
-import { View, Text, StyleSheet } from "react-native";
+import { View, Text, StyleSheet, ScrollView } from "react-native";
+import { Friend } from "../../Atoms";
 
 const Publications = () => {
   return (
     <View>
       <Text style={styles.font}>Publicaciones</Text>
+      <ScrollView style={styles.box}>
+        <Friend />
+        <Friend />
+        <Friend />
+        <Friend />
+      </ScrollView>
     </View>
   );
 };
 
 const styles = StyleSheet.create({
   box: {
-    backgroundColor: "white",
-    flexDirection: "column",
+    backgroundColor: "gray",
+    flexDirection: "row",
+    height: 150,
   },
   box2: {
     backgroundColor: "lightgray",

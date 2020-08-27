@@ -6,11 +6,15 @@ import {
   Image,
   Button,
   ImageBackground,
+  Alert,
+  TextInput,
 } from "react-native";
 
 import { AntDesign } from "@expo/vector-icons";
 import { Fontisto } from "@expo/vector-icons";
 import { Reactions } from "../../Atoms";
+import { Ionicons } from "@expo/vector-icons";
+import { Entypo } from "@expo/vector-icons";
 
 const Cover = () => {
   const image =
@@ -26,19 +30,23 @@ const Cover = () => {
             <View style={styles.backgro}>
               <Image style={styles.image} source={{ uri: profile }}></Image>
             </View>
-            <Text style={styles.font}>Noldin Zambrano</Text>
+            <Text style={styles.text}>Noldin Zambrano</Text>
             <Text style={styles.gray}>Tranquilo,alegre y Responsable</Text>
           </ImageBackground>
         </View>
-        <View style={styles.box2}>
-          <Button
-            title="Agregar a amigos"
-            onPress={() => Alert.alert("Amigo agregado")}
-          >
-            <View>
-              <Text>ddd</Text>
+        <View style={styles.row}>
+          <View style={[styles.botonSetting, styles.backgroundColor]}>
+            <View style={styles.info}>
+              <Entypo name="add-user" size={20} color="white" />
             </View>
-          </Button>
+            <Text style={styles.font}>Agregar a amigos</Text>
+          </View>
+          <View style={styles.boton}>
+            <Ionicons name="md-settings" size={24} color="black" />
+          </View>
+          <View style={styles.boton}>
+            <AntDesign name="ellipsis1" size={24} color="gray" />
+          </View>
         </View>
         <View style={styles.separator}></View>
       </View>
@@ -68,13 +76,22 @@ const styles = StyleSheet.create({
     margin: 10,
   },
   box2: {
-    backgroundColor: "lightgray",
-    flexDirection: "column",
+    backgroundColor: "white",
+    flexDirection: "row",
     height: 40,
     width: 180,
     marginHorizontal: 10,
     borderRadius: 4,
   },
+  box3: {
+    backgroundColor: "lightgray",
+    flexDirection: "row",
+    height: 40,
+    width: 80,
+    marginHorizontal: 40,
+    borderRadius: 4,
+  },
+
   image: {
     flex: 1,
     height: 200,
@@ -89,24 +106,52 @@ const styles = StyleSheet.create({
     borderRadius: 50,
   },
   info: {
-    alignSelf: "flex-end",
+    alignSelf: "center",
+    color: "white",
   },
   font: {
+    fontSize: 15,
+    color: "white",
+    marginHorizontal: 10,
+  },
+  text: {
     fontSize: 20,
-
+    color: "black",
     marginHorizontal: 10,
   },
   gray: {
     color: "gray",
   },
-  column: {
-    flexDirection: "column",
-    marginHorizontal: 17,
+
+  backgroundColor: {
+    backgroundColor: "#1e90ff",
   },
   row: {
     flexDirection: "row",
-    marginHorizontal: 10,
+    marginHorizontal: 5,
     backgroundColor: "white",
+    justifyContent: "space-between",
+  },
+  botonSetting: {
+    flexDirection: "row",
+    marginHorizontal: 6,
+    backgroundColor: "lightgray",
+    height: 30,
+    justifyContent: "center",
+    alignItems: "center",
+
+    width: 205,
+    borderRadius: 5,
+  },
+  boton: {
+    flexDirection: "row",
+    marginHorizontal: 10,
+    backgroundColor: "lightgray",
+    height: 30,
+    justifyContent: "center",
+    alignItems: "center",
+    width: 40,
+    borderRadius: 5,
   },
   separator: {
     marginVertical: 8,
@@ -116,4 +161,3 @@ const styles = StyleSheet.create({
 });
 
 export default Cover;
-/*<Image style={styles.image} source={{ uri: image }}></Image>*/

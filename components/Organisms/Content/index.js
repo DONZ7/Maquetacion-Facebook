@@ -18,7 +18,6 @@ const Content = () => {
         <Publications />
         <Profile />
         <Profile />
-        <Profile />
       </ScrollView>
     </Fragment>
   );
