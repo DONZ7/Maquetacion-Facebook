@@ -4,13 +4,12 @@ import { StyleSheet, Text, View, Image } from "react-native";
 import { AntDesign } from "@expo/vector-icons";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 import { MaterialIcons } from "@expo/vector-icons";
-import { FontAwesome5 } from "@expo/vector-icons";
 
 import { Headers, Content, Footer } from "../../Organisms";
 
 const Home = (data) => {
   return (
-    <View style={styles.box}>
+    <View style={styles.container}>
       <Headers name={data} />
 
       <Content />
@@ -22,8 +21,8 @@ const Home = (data) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "lightgray",
-    paddingTop: 50,
+    backgroundColor: "white",
+    paddingTop: 4,
   },
 
   box: {

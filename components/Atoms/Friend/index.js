@@ -15,7 +15,7 @@ const Friend = (data) => {
         <Image style={styles.image} source={{ uri: image }}></Image>
         <View style={styles.info}>
           <Text style={styles.name}>Hola</Text>
-          <Text>3 amigos en comun </Text>
+          <Text style={styles.gray}>3 amigos en comun </Text>
         </View>
         <View style={styles.row}></View>
       </View>
@@ -25,11 +25,11 @@ const Friend = (data) => {
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: "white",
+    backgroundColor: "#fffafa",
   },
 
   box: {
-    backgroundColor: "red",
+    backgroundColor: "white",
     flexDirection: "column",
     marginTop: 13,
     width: 102,
@@ -55,6 +55,9 @@ const styles = StyleSheet.create({
     marginHorizontal: 60,
     marginTop: 10,
     justifyContent: "space-between",
+  },
+  gray: {
+    color: "gray",
   },
 });
 

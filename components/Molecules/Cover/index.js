@@ -1,11 +1,11 @@
 import React, { Fragment } from "react";
-import { View, Text, StyleSheet, Image } from "react-native";
+import { View, Text, StyleSheet, Image, Button } from "react-native";
 
 import { AntDesign } from "@expo/vector-icons";
 import { Fontisto } from "@expo/vector-icons";
 import { Reactions } from "../../Atoms";
 
-const Profile = () => {
+const Cover = () => {
   const image =
     "https://scontent.ftgu2-1.fna.fbcdn.net/v/t1.0-9/107826573_3163875227002248_122816155127681500_n.jpg?_nc_cat=110&_nc_sid=e3f864&_nc_ohc=4MnNgjg_VYYAX-jljS2&_nc_ht=scontent.ftgu2-1.fna&oh=dcea86fb533fa74d9a8783a6cecf00c1&oe=5F6AB58D";
   const profile =
@@ -13,7 +13,6 @@ const Profile = () => {
 
   return (
     <Fragment>
-      <View style={styles.box2}></View>
       <View style={styles.box}>
         <View style={styles.row}>
           <View>
@@ -39,25 +38,50 @@ const Profile = () => {
         <View style={styles.box}>
           <Image style={styles.image} source={{ uri: image }}></Image>
         </View>
-        <Reactions />
+        <View style={styles.box2}>
+          <Button
+            title="Agregar amigos"
+            onPress={() => Alert.alert("Amigo agregado")}
+          />
+        </View>
+        <View style={styles.separator}></View>
       </View>
     </Fragment>
   );
 };
 
 const styles = StyleSheet.create({
+  backgro: {
+    height: 300,
+  },
+  container: {
+    flex: 1,
+    flexDirection: "column",
+  },
+  background: {
+    flex: 1,
+    resizeMode: "cover",
+    justifyContent: "center",
+  },
   box: {
     backgroundColor: "white",
+    flexDirection: "column",
     margin: 10,
   },
   box2: {
     backgroundColor: "lightgray",
-    height: 8,
+    flexDirection: "column",
+    height: 40,
+    width: 150,
+    marginHorizontal: 10,
+    borderRadius: 4,
   },
   image: {
     flex: 1,
-    height: 200,
-    marginVertical: 10,
+    height: 300,
+    width: 300,
+    borderRadius: 150,
+    borderColor: "white",
   },
   imageProfile: {
     height: 30,
@@ -91,4 +115,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Profile;
+export default Cover;

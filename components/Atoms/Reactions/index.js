@@ -31,8 +31,10 @@ const Reactions = (data) => {
           </View>
         </View>
         <View style={styles.row}>
-          <FontAwesome5 name="share" size={24} color="black" />
-          <Text style={styles.font}>Compartir</Text>
+          <FontAwesome5 name="share" size={20} color="gray" />
+          <Text style={styles.gray} size={20}>
+            Compartir
+          </Text>
         </View>
       </View>
     </View>
@@ -50,23 +52,27 @@ const styles = StyleSheet.create({
   column: {
     flex: 1,
     flexDirection: "column",
-    backgroundColor: "blue",
+    backgroundColor: "white",
   },
   font: {
-    fontSize: 10,
+    fontSize: 12,
+    color: "gray",
+  },
+  gray: {
+    color: "gray",
   },
   iconsContainer: {
     flex: 1,
     alignItems: "center",
     flexDirection: "row",
-    backgroundColor: "green",
+    backgroundColor: "white",
   },
   row: {
     flexDirection: "row",
-
+    justifyContent: "center",
     marginHorizontal: 10,
     marginTop: 10,
-    backgroundColor: "red",
+    backgroundColor: "white",
   },
   margin: {
     margin: 10,

@@ -34,6 +34,7 @@ const Information = (data) => {
         <AntDesign name="ellipsis1" size={24} color="gray" />
         <Text style={styles.space}>Ver la informacion de </Text>
       </View>
+      <View style={styles.separator}></View>
     </View>
   );
 };
@@ -74,6 +75,12 @@ const styles = StyleSheet.create({
     justifyContent: "flex-start",
   },
   space: { marginHorizontal: 10 },
+  separator: {
+    marginVertical: 8,
+    marginHorizontal: 10,
+    borderBottomColor: "#737373",
+    borderBottomWidth: StyleSheet.hairlineWidth,
+  },
 });
 
 export default Information;

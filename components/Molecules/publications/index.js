@@ -5,7 +5,6 @@ const Publications = () => {
   return (
     <View>
       <Text style={styles.font}>Publicaciones</Text>
-      <View style={styles.separator}></View>
     </View>
   );
 };
@@ -13,6 +12,12 @@ const Publications = () => {
 const styles = StyleSheet.create({
   box: {
     backgroundColor: "white",
+    flexDirection: "column",
+  },
+  box2: {
+    backgroundColor: "lightgray",
+    height: 8,
+
     flexDirection: "column",
   },
 
@@ -40,6 +45,7 @@ const styles = StyleSheet.create({
   },
   separator: {
     marginVertical: 8,
+    marginHorizontal: 10,
     borderBottomColor: "#737373",
     borderBottomWidth: StyleSheet.hairlineWidth,
   },
