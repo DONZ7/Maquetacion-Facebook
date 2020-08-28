@@ -20,13 +20,15 @@ const HeaderProfile = () => {
             ></Image>
           </View>
           <Text style={styles.font}>Noldin Zambrano</Text>
-          <Text>actualizo su foto</Text>
-          <AntDesign
-            style={styles.info}
-            name="ellipsis1"
-            size={24}
-            color="gray"
-          />
+          <Text>actualizo su foto portada</Text>
+          <View>
+            <AntDesign
+              style={styles.info}
+              name="ellipsis1"
+              size={24}
+              color="gray"
+            />
+          </View>
         </View>
         <View style={styles.row}>
           <Text style={[styles.font, styles.gray]}> 3 de marzo</Text>

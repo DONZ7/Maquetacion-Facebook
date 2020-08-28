@@ -6,19 +6,30 @@ const Publications = () => {
   return (
     <View>
       <Text style={styles.font}>Publicaciones</Text>
-      <ScrollView style={styles.box}>
+      <View style={styles.box2}></View>
+      <ScrollView
+        horizontal={true}
+        showsHorizontalScrollIndicator={false}
+        style={styles.box}
+      >
         <Friend />
         <Friend />
-        <Friend />
-        <Friend />
+
+        <View style={styles.boxPublications}></View>
       </ScrollView>
     </View>
   );
 };
 
 const styles = StyleSheet.create({
+  boxPublications: {
+    backgroundColor: "white",
+
+    height: 150,
+    width: 200,
+  },
   box: {
-    backgroundColor: "gray",
+    backgroundColor: "white",
     flexDirection: "row",
     height: 150,
   },
@@ -38,6 +49,7 @@ const styles = StyleSheet.create({
     fontSize: 20,
     marginTop: 2,
     marginHorizontal: 10,
+    marginVertical: 10,
   },
   column: {
     flexDirection: "column",

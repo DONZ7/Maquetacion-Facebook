@@ -3,25 +3,28 @@ import { StyleSheet, Text, View, Image, TextInput } from "react-native";
 
 import { Ionicons } from "@expo/vector-icons";
 
-import { AntDesign } from "@expo/vector-icons";
-import { MaterialCommunityIcons } from "@expo/vector-icons";
-import { MaterialIcons } from "@expo/vector-icons";
+import { Entypo } from "@expo/vector-icons";
 
 const Headers = (data) => {
   const { name } = data;
   return (
-    <View style={styles.box}>
-      <View>
-        <View style={styles.row}>
-          <View>
-            <Ionicons name="ios-search" size={24} color="gray" />
-          </View>
-          <View style={styles.searchSection}>
-            <TextInput
-              style={styles.name}
-              placeholder="Buscar"
-              underlineColorAndroid="transparent"
-            />
+    <View style={styles.row}>
+      <View style={styles.row}>
+        <Entypo name="chevron-left" size={24} color="black" />
+      </View>
+      <View style={styles.box}>
+        <View>
+          <View style={styles.row}>
+            <View>
+              <Ionicons name="ios-search" size={24} color="gray" />
+            </View>
+            <View style={styles.searchSection}>
+              <TextInput
+                style={styles.name}
+                placeholder="Buscar"
+                underlineColorAndroid="transparent"
+              />
+            </View>
           </View>
         </View>
       </View>
@@ -39,7 +42,7 @@ const styles = StyleSheet.create({
     backgroundColor: "lightgray",
     flexDirection: "row",
     height: 40,
-    marginHorizontal: 30,
+    marginHorizontal: 1,
     marginVertical: 8,
     borderRadius: 50,
   },
@@ -53,14 +56,13 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     marginHorizontal: 12,
     marginTop: 10,
-    justifyContent: "space-between",
+    justifyContent: "center",
   },
 
   searchSection: {
     marginHorizontal: 10,
     width: 240,
-    color: "#424242",
-    alignItems: "flex-start",
+    alignSelf: "center",
   },
   searchIcon: {
     padding: 10,

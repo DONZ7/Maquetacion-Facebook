@@ -6,6 +6,7 @@ import {
   Publications,
   Profile,
   Cover,
+  ImageProfile,
 } from "../../Molecules";
 
 const Content = () => {
@@ -17,7 +18,7 @@ const Content = () => {
         <Friends />
         <Publications />
         <Profile />
-        <Profile />
+        <ImageProfile />
       </ScrollView>
     </Fragment>
   );
