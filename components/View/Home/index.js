@@ -10,8 +10,8 @@ import { Headers, Content, Footer } from "../../Organisms";
 const Home = (data) => {
   return (
     <View style={styles.container}>
-      <Headers name={data} />
-      <Content />
+      <Headers data={data} />
+      <Content data={data.fecha} />
       <Footer />
     </View>
   );

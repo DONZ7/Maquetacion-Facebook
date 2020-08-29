@@ -19,20 +19,24 @@ const HeaderProfile = () => {
               source={{ uri: profile }}
             ></Image>
           </View>
-          <Text style={styles.font}>Noldin Zambrano</Text>
-          <Text>actualizo su foto portada</Text>
-          <View>
-            <AntDesign
-              style={styles.info}
-              name="ellipsis1"
-              size={24}
-              color="gray"
-            />
+          <View style={styles.column}>
+            <View style={styles.row}>
+              <Text style={[styles.font, styles.bold]}>Noldin Zambrano</Text>
+              <Text>actualizo su foto portada</Text>
+
+              <AntDesign
+                style={styles.info}
+                name="ellipsis1"
+                size={24}
+                color="gray"
+              />
+            </View>
+
+            <View style={styles.row}>
+              <Text style={[styles.font, styles.gray]}> 29 de agosto</Text>
+              <Fontisto name="earth" size={18} color="gray" />
+            </View>
           </View>
-        </View>
-        <View style={styles.row}>
-          <Text style={[styles.font, styles.gray]}> 3 de marzo</Text>
-          <Fontisto name="earth" size={18} color="gray" />
         </View>
       </View>
     </Fragment>
@@ -42,7 +46,9 @@ const HeaderProfile = () => {
 const styles = StyleSheet.create({
   box: {
     backgroundColor: "white",
+    marginHorizontal: 3,
   },
+
   box2: {
     backgroundColor: "lightgray",
     height: 8,
@@ -54,28 +60,29 @@ const styles = StyleSheet.create({
     marginVertical: 10,
   },
   imageProfile: {
-    height: 30,
-    width: 30,
+    height: 40,
+    width: 40,
     borderRadius: 50,
+    marginStart: 7,
   },
+  bold: { fontWeight: "bold" },
   info: {
     alignSelf: "flex-end",
   },
   font: {
-    fontSize: 15,
+    fontSize: 14,
 
-    marginHorizontal: 10,
+    marginHorizontal: 8,
   },
   gray: {
     color: "gray",
   },
   column: {
     flexDirection: "column",
-    marginHorizontal: 17,
+    marginHorizontal: 1,
   },
   row: {
     flexDirection: "row",
-    marginHorizontal: 10,
     backgroundColor: "white",
   },
   separator: {

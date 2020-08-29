@@ -9,6 +9,7 @@ const App = () => {
       "https://concepto.de/wp-content/uploads/2014/03/modelo-e1551453273683.jpg",
     name: "Noldin Zambrano",
     likes: 100,
+    fecha: "29 de agosto",
   };
 
   return (

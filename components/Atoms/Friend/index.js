@@ -1,5 +1,5 @@
 import React from "react";
-import { StyleSheet, Text, View, Image } from "react-native";
+import { StyleSheet, Text, View, Image, TouchableOpacity } from "react-native";
 
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 import { MaterialIcons } from "@expo/vector-icons";
@@ -11,14 +11,16 @@ const Friend = (data) => {
 
   return (
     <View style={styles.container}>
-      <View style={styles.box}>
-        <Image style={styles.image} source={{ uri: image }}></Image>
-        <View style={styles.info}>
-          <Text style={styles.name}>Hola</Text>
-          <Text style={styles.gray}>3 amigos en comun </Text>
+      <TouchableOpacity>
+        <View style={styles.box}>
+          <Image style={styles.image} source={{ uri: image }}></Image>
+          <View style={styles.info}>
+            <Text style={styles.name}>Karla</Text>
+            <Text style={styles.gray}>3 amigos en comun </Text>
+          </View>
+          <View style={styles.row}></View>
         </View>
-        <View style={styles.row}></View>
-      </View>
+      </TouchableOpacity>
     </View>
   );
 };

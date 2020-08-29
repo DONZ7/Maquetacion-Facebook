@@ -9,7 +9,7 @@ import {
   ImageProfile,
 } from "../../Molecules";
 
-const Content = () => {
+const Content = (data) => {
   return (
     <Fragment>
       <ScrollView>

@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "AwesomeProject",
+    "name": "Facebook",
     "slug": "AwesomeProject",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -13,9 +13,11 @@
     "updates": {
       "fallbackToCacheTimeout": 0
     },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
+    "assetBundlePatterns": ["*assets/*"],
+    "android": {
+      "package": "com.facebook.maquetacion",
+      "versionCode": 1
+    },
     "ios": {
       "supportsTablet": true
     },

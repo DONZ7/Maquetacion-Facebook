@@ -1,6 +1,6 @@
 import React from "react";
 import { View, Text, StyleSheet, ScrollView } from "react-native";
-import { Friend } from "../../Atoms";
+import { Friend, Publication } from "../../Atoms";
 
 const Publications = () => {
   return (
@@ -12,8 +12,8 @@ const Publications = () => {
         showsHorizontalScrollIndicator={false}
         style={styles.box}
       >
-        <Friend />
-        <Friend />
+        <Publication />
+        <Publication />
 
         <View style={styles.boxPublications}></View>
       </ScrollView>

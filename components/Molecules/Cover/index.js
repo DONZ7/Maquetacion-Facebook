@@ -8,6 +8,7 @@ import {
   ImageBackground,
   Alert,
   TextInput,
+  TouchableOpacity,
 } from "react-native";
 
 import { AntDesign } from "@expo/vector-icons";
@@ -35,18 +36,26 @@ const Cover = () => {
           </ImageBackground>
         </View>
         <View style={styles.row}>
-          <View style={[styles.botonSetting, styles.backgroundColor]}>
-            <View style={styles.info}>
-              <Entypo name="add-user" size={20} color="white" />
+          <TouchableOpacity
+            onPress={() => Alert.alert("Buenos dias equipo Appland")}
+          >
+            <View style={[styles.botonSetting, styles.backgroundColor]}>
+              <View style={styles.info}>
+                <Entypo name="add-user" size={20} color="white" />
+              </View>
+              <Text style={styles.font}>Agregar a amigos</Text>
             </View>
-            <Text style={styles.font}>Agregar a amigos</Text>
-          </View>
-          <View style={styles.boton}>
-            <Ionicons name="md-settings" size={24} color="black" />
-          </View>
-          <View style={styles.boton}>
-            <AntDesign name="ellipsis1" size={24} color="gray" />
-          </View>
+          </TouchableOpacity>
+          <TouchableOpacity>
+            <View style={styles.boton}>
+              <Ionicons name="md-settings" size={24} color="black" />
+            </View>
+          </TouchableOpacity>
+          <TouchableOpacity>
+            <View style={styles.boton}>
+              <AntDesign name="ellipsis1" size={24} color="gray" />
+            </View>
+          </TouchableOpacity>
         </View>
         <View style={styles.separator}></View>
       </View>

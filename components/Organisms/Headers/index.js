@@ -1,5 +1,12 @@
 import React from "react";
-import { StyleSheet, Text, View, Image, TextInput } from "react-native";
+import {
+  StyleSheet,
+  Text,
+  View,
+  Image,
+  TextInput,
+  TouchableOpacity,
+} from "react-native";
 
 import { Ionicons } from "@expo/vector-icons";
 
@@ -9,9 +16,11 @@ const Headers = (data) => {
   const { name } = data;
   return (
     <View style={styles.row}>
-      <View style={styles.row}>
-        <Entypo name="chevron-left" size={24} color="black" />
-      </View>
+      <TouchableOpacity>
+        <View style={styles.row}>
+          <Entypo name="chevron-left" size={24} color="black" />
+        </View>
+      </TouchableOpacity>
       <View style={styles.box}>
         <View>
           <View style={styles.row}>

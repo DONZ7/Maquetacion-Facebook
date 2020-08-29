@@ -1,5 +1,13 @@
 import React from "react";
-import { StyleSheet, Text, View, Image, Button, Alert } from "react-native";
+import {
+  StyleSheet,
+  Text,
+  View,
+  Image,
+  Button,
+  Alert,
+  TouchableOpacity,
+} from "react-native";
 
 import { AntDesign } from "@expo/vector-icons";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
@@ -26,9 +34,11 @@ const Friends = (data) => {
             return <Friend />;
           })}
       </View>
-      <View style={styles.box2}>
-        <Text style={styles.name}>Ver todos los amigos</Text>
-      </View>
+      <TouchableOpacity>
+        <View style={styles.box2}>
+          <Text style={styles.name}>Ver todos los amigos</Text>
+        </View>
+      </TouchableOpacity>
       <View style={styles.separator}></View>
     </View>
   );
